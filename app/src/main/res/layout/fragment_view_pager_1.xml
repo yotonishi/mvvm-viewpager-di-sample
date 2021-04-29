@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="com.otonishi.example.mvvmviewpagerdi.ui.viewpager.ViewPagerModel" />
+
+    </data>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_margin="12dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="free input"
+                app:errorEnabled="true"
+                app:errorText="@{viewmodel.errorText}">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/et_view_pager_1_input"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@={viewmodel.inputText}" />
+            </com.google.android.material.textfield.TextInputLayout>
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="24dp"
+            android:onClick="@{() -> viewmodel.onClickToNext()}"
+            android:text="Next"
+            android:textAllCaps="false" />
+    </RelativeLayout>
+
+</layout>
