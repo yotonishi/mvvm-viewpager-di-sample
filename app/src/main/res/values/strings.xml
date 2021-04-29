@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">mvvm-viewpager-sample-2</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+
+    <string name="top_title">This application is a sample of ViewPager and DI(Hilt).</string>
+    <string name="top_author">by %1$s .</string>
+
+    <string name="radio_selected_1">Select 1</string>
+    <string name="radio_selected_2">Select 2</string>
+</resources>
